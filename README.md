@@ -11,7 +11,6 @@ pip install the-one-lotr-sdk
 ```
 
 ## Basic Usage
-sdf sdf
 Start by creating an instance of the SDK with your API token:
 
 ```python
