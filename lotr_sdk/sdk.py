@@ -73,7 +73,7 @@ class LotrSDK:
         return {
             "eq": "=",  # Equals
             "neq": "!=",  # Not equals
-            "in": "=", # in 
+            "in": "=", # in (currently not supported) 
             # "nin": "!",  # Not in (currently not supported)
             # "exists": "",  # Exists (currently not supported)
             # "nexists": "!",  # Not exists (currently not supported)

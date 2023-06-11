@@ -62,16 +62,17 @@ The `get_quotes` method supports pagination, sorting, and filtering:
 
 ```python
 quotes = sdk.get_quotes(
-    movies=['The Fellowship of the Ring'],
-    sort={'movie': 'asc', 'character': 'desc'},
-    filter={'character': 'eq:Frodo Baggins'},
-    limit=10
+    movies=["The Fellowship of the Ring", "The Return of the king"], 
+    characters=["Gandalf", "Gimli"],
+    sort={"dialog": "asc"},  
+    filter={"dialog": {"operator": "eq", "value": "Hobbits!"}},
+    limit=1000
 )
 ```
 
 - The `movies` and `characters` parameters take a list of movie and character names respectively.
 - The `sort` parameter takes a dictionary of fields and their sorting order ('asc' or 'desc').
-- The `filter` parameter takes a dictionary of fields and their filter value. The filter format is 'operator:value'. Available operators are 'eq' (equals), 'neq' (not equals), 'in' (in), 'nin' (not in), 'exists' (exists), 'nexists' (not exists), 'regex' (regular expression), 'lt' (less than), 'gt' (greater than), 'lte' (less than or equal to), and 'gte' (greater than or equal to).
+- The `filter` parameter takes a dictionary of fields and their filter value. The filter format is 'operator:value'. Available operators are 'eq' (equals), 'neq' (not equals), at the moment we only support 'eq' and 'neq' but support for more complex operators can easily be added. 
 - The `limit` parameter takes an integer for the maximum number of results per page. The SDK handles fetching all pages automatically.
 
 ### Error Handling
