@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+venv/
+*.env
+*.flaskenv
+
+# Ignore Python build artifacts
+__pycache__
+*.py[cod]
+
+# Ignore Python distribution artifacts
+dist
+build
+*.egg-info
+
+# Ignore Python eggs
+.eggs
